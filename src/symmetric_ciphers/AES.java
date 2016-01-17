@@ -5,8 +5,15 @@ package com.company;
  */
 import java.io.FileNotFoundException;
 
+<<<<<<< HEAD
 public class AES extends CipherMethods{
     private AESKeyGen keyGen;
+=======
+
+
+public class AES{
+    private AESKeyGen keyGeneration;
+>>>>>>> origin/JPutnam91_JavaCode
     private String[][] keySBox;
     private String[] AESKeys;
     private String[] currentKeyArray;
@@ -14,7 +21,7 @@ public class AES extends CipherMethods{
     private String currentKey;
 
     public AES() throws FileNotFoundException{
-        keyGen = new AESKeyGen();
+        keyGeneration = new AESKeyGen();
         keySBox = keyGen.getSBox();
         AESKeys = keyGen.getAESKeys();
         currentKeyArray = new String[AESKeys.length];
@@ -62,6 +69,7 @@ public class AES extends CipherMethods{
         }
 
     }
+<<<<<<< HEAD
 
     private void subBytes() {
         String result = "";
@@ -167,3 +175,7 @@ public class AES extends CipherMethods{
 
 
 }
+=======
+    
+}
+>>>>>>> origin/JPutnam91_JavaCode

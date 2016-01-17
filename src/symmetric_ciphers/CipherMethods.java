@@ -93,4 +93,8 @@ public class CipherMethods {
         return result;
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/JPutnam91_JavaCode
