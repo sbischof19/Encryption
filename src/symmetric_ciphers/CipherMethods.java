@@ -1,3 +1,8 @@
+package com.company;
+
+/**
+ * Created by scott_000 on 1/8/2016.
+ */
 public class CipherMethods {
 
     protected String asciiConvert(String message, int radix) {
@@ -9,15 +14,15 @@ public class CipherMethods {
             case 2:
                 for (int a = 0; a < chars.length; a++) {
                     result.append(String.format("%8s", Integer.toBinaryString((int) chars[a])).replace(' ', '0'));
-                    
+
                 }
                 break;
             case 16:
-                
+
                 for (int i = 0; i < chars.length; i++) {
                     result.append(String.format("%2s", Integer.toHexString((int) chars[i])).replace(' ', '0'));
                 }
-                
+
                 break;
         }
         return result.toString();
@@ -26,12 +31,12 @@ public class CipherMethods {
 
     protected String hexToAscii(String hex) {
 
-    StringBuilder result = new StringBuilder();
-    for (int i = 0; i < hex.length(); i+=2) {
-        String str = hex.substring(i, i+2);
-        result.append((char)Integer.parseInt(str, 16));
-    }
-    
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < hex.length(); i+=2) {
+            String str = hex.substring(i, i+2);
+            result.append((char)Integer.parseInt(str, 16));
+        }
+
 
         return result.toString();
     }
@@ -39,11 +44,11 @@ public class CipherMethods {
     protected String binaryToAscii(String binary) {
 
         StringBuilder result = new StringBuilder();
-    for (int i = 0; i < binary.length(); i+=8) {
-        String str = binary.substring(i, i+8);
-        result.append((char)Integer.parseInt(str, 2));
-    }
-    
+        for (int i = 0; i < binary.length(); i+=8) {
+            String str = binary.substring(i, i+8);
+            result.append((char)Integer.parseInt(str, 2));
+        }
+
 
         return result.toString();
     }
@@ -86,24 +91,6 @@ public class CipherMethods {
             }
         }
         return result;
-    }
-
-    protected void arraySwap(int[] S, int i, int j) {
-        int temp = S[i];
-        S[i] = S[j];
-        S[j] = temp;
-    }
-
-    protected int[] permutateArray(int[] original, int[] permutate, int[] temp) {
-        int b;
-
-        for (int i = 0; i < permutate.length; i++) {
-
-            b = permutate[i];
-            temp[i + 1] = original[b];
-        }
-        original = temp;
-        return original;
     }
 
 }
